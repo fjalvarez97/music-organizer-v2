@@ -82,4 +82,16 @@ public class MusicOrganizer
     {
         player.stop();
     }
+    
+    /**
+     * Lista todos los elementos de la coleccion (canciones)
+     */
+    public void listAllFiles()
+    {
+        for (String cancion : files)
+        {
+            System.out.println(cancion);
+        }
+    }
 }
+
