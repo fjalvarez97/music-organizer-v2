@@ -95,5 +95,20 @@ public class MusicOrganizer
             position++;
         }
     }
+    
+    /**
+     * Enumera los nombres de archivo que se corresponden con 
+     * la cadena de busqueda proporcionada.
+     */
+    public void listMatching(String searchString)
+    {
+        for (String filename : files)
+        {
+            if(filename.contains(searchString))
+            {
+                System.out.println(filename);
+            }
+        }
+    }
 }
 
