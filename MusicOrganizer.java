@@ -102,12 +102,19 @@ public class MusicOrganizer
      */
     public void listMatching(String searchString)
     {
+        boolean encuentraNombre = false;
         for (String filename : files)
         {
             if(filename.contains(searchString))
             {
                 System.out.println(filename);
+                encuentraNombre = true;
             }
+        }
+        
+        if (!encuentraNombre)
+        {
+            System.out.println("No se ha encontrado ningun archivo con ese nombre");
         }
     }
 }
