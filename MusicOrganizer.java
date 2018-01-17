@@ -132,5 +132,33 @@ public class MusicOrganizer
             }
         }
     }
+    
+    /**
+     * Localizar el indice del primer archivo que se corresponda con 
+     * la cadena de busqueda indicada
+     */
+    public int findFirst(String searchString)
+    {
+        int index = 0;
+        boolean searching = true;
+        
+        while(searching && index < files.size())
+        {
+            String filename = files.get(index);
+            if(filename.contains(searchString))
+            {
+                searching = false;
+            }
+            else
+            {
+                index ++;
+            }     
+        }
+        if(searching)
+        {
+            index = -1;
+        }
+        return index;
+    }
 }
 
